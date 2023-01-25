@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27E30FB629814C8000ABB82D /* AsyncTransform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E30FAD29814C8000ABB82D /* AsyncTransform.framework */; };
+		27E30FBC29814C8000ABB82D /* AsyncTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E30FB029814C8000ABB82D /* AsyncTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27E30FD429814CC100ABB82D /* AsyncTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FC629814CC100ABB82D /* AsyncTransformer.swift */; };
+		27E30FD529814CC100ABB82D /* AsyncTransformable+Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FC729814CC100ABB82D /* AsyncTransformable+Factories.swift */; };
+		27E30FD629814CC100ABB82D /* MapTrasformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FC829814CC100ABB82D /* MapTrasformer.swift */; };
+		27E30FD729814CC100ABB82D /* AsyncTransformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FC929814CC100ABB82D /* AsyncTransformable.swift */; };
+		27E30FD829814CC100ABB82D /* AsyncTransformBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FCA29814CC100ABB82D /* AsyncTransformBlock.swift */; };
+		27E30FD929814CC100ABB82D /* AsyncTransformable+Pipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FCB29814CC100ABB82D /* AsyncTransformable+Pipeline.swift */; };
+		27E30FDA29814CC100ABB82D /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FCD29814CC100ABB82D /* Cancelable.swift */; };
+		27E30FDB29814CC100ABB82D /* CancelableBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FCE29814CC100ABB82D /* CancelableBag.swift */; };
+		27E30FDC29814CC100ABB82D /* NoopCancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FCF29814CC100ABB82D /* NoopCancelable.swift */; };
+		27E30FDD29814CC100ABB82D /* AnyCancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FD029814CC100ABB82D /* AnyCancelable.swift */; };
+		27E30FDE29814CC100ABB82D /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FD229814CC100ABB82D /* Support.swift */; };
+		27E30FDF29814CC100ABB82D /* Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FD329814CC100ABB82D /* Completion.swift */; };
+		27E30FEB29815B7F00ABB82D /* MapTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FE929815B2000ABB82D /* MapTransformerTests.swift */; };
+		27E30FEC29815B8700ABB82D /* MockErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FE529815AE900ABB82D /* MockErrors.swift */; };
+		27E30FED29815B8C00ABB82D /* SpyTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FE229814D4A00ABB82D /* SpyTransformer.swift */; };
+		27E30FEE29815B9000ABB82D /* TransformerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FE729815AFC00ABB82D /* TransformerState.swift */; };
+		27E30FF029816AE600ABB82D /* AsyncTransformableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FEF29816AE600ABB82D /* AsyncTransformableTests.swift */; };
+		27E30FF4298170EF00ABB82D /* AnyCancelableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FF3298170EF00ABB82D /* AnyCancelableTests.swift */; };
+		27E30FF62981720D00ABB82D /* CancelableBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E30FF52981720D00ABB82D /* CancelableBagTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27E30FB729814C8000ABB82D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27E30FA429814C8000ABB82D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E30FAC29814C8000ABB82D;
+			remoteInfo = AsyncTransform;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27E30FAD29814C8000ABB82D /* AsyncTransform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsyncTransform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E30FB029814C8000ABB82D /* AsyncTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncTransform.h; sourceTree = "<group>"; };
+		27E30FB529814C8000ABB82D /* AsyncTransformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncTransformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E30FC629814CC100ABB82D /* AsyncTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTransformer.swift; sourceTree = "<group>"; };
+		27E30FC729814CC100ABB82D /* AsyncTransformable+Factories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AsyncTransformable+Factories.swift"; sourceTree = "<group>"; };
+		27E30FC829814CC100ABB82D /* MapTrasformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTrasformer.swift; sourceTree = "<group>"; };
+		27E30FC929814CC100ABB82D /* AsyncTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTransformable.swift; sourceTree = "<group>"; };
+		27E30FCA29814CC100ABB82D /* AsyncTransformBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTransformBlock.swift; sourceTree = "<group>"; };
+		27E30FCB29814CC100ABB82D /* AsyncTransformable+Pipeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AsyncTransformable+Pipeline.swift"; sourceTree = "<group>"; };
+		27E30FCD29814CC100ABB82D /* Cancelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
+		27E30FCE29814CC100ABB82D /* CancelableBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelableBag.swift; sourceTree = "<group>"; };
+		27E30FCF29814CC100ABB82D /* NoopCancelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoopCancelable.swift; sourceTree = "<group>"; };
+		27E30FD029814CC100ABB82D /* AnyCancelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCancelable.swift; sourceTree = "<group>"; };
+		27E30FD229814CC100ABB82D /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		27E30FD329814CC100ABB82D /* Completion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completion.swift; sourceTree = "<group>"; };
+		27E30FE229814D4A00ABB82D /* SpyTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTransformer.swift; sourceTree = "<group>"; };
+		27E30FE529815AE900ABB82D /* MockErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockErrors.swift; sourceTree = "<group>"; };
+		27E30FE729815AFC00ABB82D /* TransformerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerState.swift; sourceTree = "<group>"; };
+		27E30FE929815B2000ABB82D /* MapTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTransformerTests.swift; sourceTree = "<group>"; };
+		27E30FEF29816AE600ABB82D /* AsyncTransformableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncTransformableTests.swift; sourceTree = "<group>"; };
+		27E30FF3298170EF00ABB82D /* AnyCancelableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCancelableTests.swift; sourceTree = "<group>"; };
+		27E30FF52981720D00ABB82D /* CancelableBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableBagTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27E30FAA29814C8000ABB82D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E30FB229814C8000ABB82D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E30FB629814C8000ABB82D /* AsyncTransform.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27E30FA329814C8000ABB82D = {
+			isa = PBXGroup;
+			children = (
+				27E30FAF29814C8000ABB82D /* Source */,
+				27E30FB929814C8000ABB82D /* Tests */,
+				27E30FAE29814C8000ABB82D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27E30FAE29814C8000ABB82D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27E30FAD29814C8000ABB82D /* AsyncTransform.framework */,
+				27E30FB529814C8000ABB82D /* AsyncTransformTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27E30FAF29814C8000ABB82D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				27E30FCC29814CC100ABB82D /* Cancelables */,
+				27E30FC529814CC100ABB82D /* Transforms */,
+				27E30FD129814CC100ABB82D /* Utilities */,
+				27E30FB029814C8000ABB82D /* AsyncTransform.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		27E30FB929814C8000ABB82D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				27E30FF2298170D200ABB82D /* Cancelables */,
+				27E30FF1298170C300ABB82D /* Transforms */,
+				27E30FE429815AD000ABB82D /* Mocks */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		27E30FC529814CC100ABB82D /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				27E30FC929814CC100ABB82D /* AsyncTransformable.swift */,
+				27E30FCB29814CC100ABB82D /* AsyncTransformable+Pipeline.swift */,
+				27E30FC729814CC100ABB82D /* AsyncTransformable+Factories.swift */,
+				27E30FCA29814CC100ABB82D /* AsyncTransformBlock.swift */,
+				27E30FC629814CC100ABB82D /* AsyncTransformer.swift */,
+				27E30FC829814CC100ABB82D /* MapTrasformer.swift */,
+			);
+			path = Transforms;
+			sourceTree = "<group>";
+		};
+		27E30FCC29814CC100ABB82D /* Cancelables */ = {
+			isa = PBXGroup;
+			children = (
+				27E30FCD29814CC100ABB82D /* Cancelable.swift */,
+				27E30FCE29814CC100ABB82D /* CancelableBag.swift */,
+				27E30FCF29814CC100ABB82D /* NoopCancelable.swift */,
+				27E30FD029814CC100ABB82D /* AnyCancelable.swift */,
+			);
+			path = Cancelables;
+			sourceTree = "<group>";
+		};
+		27E30FD129814CC100ABB82D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				27E30FD229814CC100ABB82D /* Support.swift */,
+				27E30FD329814CC100ABB82D /* Completion.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		27E30FE429815AD000ABB82D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				27E30FE529815AE900ABB82D /* MockErrors.swift */,
+				27E30FE229814D4A00ABB82D /* SpyTransformer.swift */,
+				27E30FE729815AFC00ABB82D /* TransformerState.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		27E30FF1298170C300ABB82D /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				27E30FE929815B2000ABB82D /* MapTransformerTests.swift */,
+				27E30FEF29816AE600ABB82D /* AsyncTransformableTests.swift */,
+			);
+			path = Transforms;
+			sourceTree = "<group>";
+		};
+		27E30FF2298170D200ABB82D /* Cancelables */ = {
+			isa = PBXGroup;
+			children = (
+				27E30FF3298170EF00ABB82D /* AnyCancelableTests.swift */,
+				27E30FF52981720D00ABB82D /* CancelableBagTests.swift */,
+			);
+			path = Cancelables;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		27E30FA829814C8000ABB82D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E30FBC29814C8000ABB82D /* AsyncTransform.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		27E30FAC29814C8000ABB82D /* AsyncTransform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E30FBF29814C8000ABB82D /* Build configuration list for PBXNativeTarget "AsyncTransform" */;
+			buildPhases = (
+				27E30FA829814C8000ABB82D /* Headers */,
+				27E30FA929814C8000ABB82D /* Sources */,
+				27E30FAA29814C8000ABB82D /* Frameworks */,
+				27E30FAB29814C8000ABB82D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsyncTransform;
+			productName = AsyncTransform;
+			productReference = 27E30FAD29814C8000ABB82D /* AsyncTransform.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		27E30FB429814C8000ABB82D /* AsyncTransformTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E30FC229814C8000ABB82D /* Build configuration list for PBXNativeTarget "AsyncTransformTests" */;
+			buildPhases = (
+				27E30FB129814C8000ABB82D /* Sources */,
+				27E30FB229814C8000ABB82D /* Frameworks */,
+				27E30FB329814C8000ABB82D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27E30FB829814C8000ABB82D /* PBXTargetDependency */,
+			);
+			name = AsyncTransformTests;
+			productName = AsyncTransformTests;
+			productReference = 27E30FB529814C8000ABB82D /* AsyncTransformTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27E30FA429814C8000ABB82D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					27E30FAC29814C8000ABB82D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					27E30FB429814C8000ABB82D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 27E30FA729814C8000ABB82D /* Build configuration list for PBXProject "AsyncTransform" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27E30FA329814C8000ABB82D;
+			productRefGroup = 27E30FAE29814C8000ABB82D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27E30FAC29814C8000ABB82D /* AsyncTransform */,
+				27E30FB429814C8000ABB82D /* AsyncTransformTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27E30FAB29814C8000ABB82D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E30FB329814C8000ABB82D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27E30FA929814C8000ABB82D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E30FDE29814CC100ABB82D /* Support.swift in Sources */,
+				27E30FD529814CC100ABB82D /* AsyncTransformable+Factories.swift in Sources */,
+				27E30FD929814CC100ABB82D /* AsyncTransformable+Pipeline.swift in Sources */,
+				27E30FDD29814CC100ABB82D /* AnyCancelable.swift in Sources */,
+				27E30FDC29814CC100ABB82D /* NoopCancelable.swift in Sources */,
+				27E30FDB29814CC100ABB82D /* CancelableBag.swift in Sources */,
+				27E30FD729814CC100ABB82D /* AsyncTransformable.swift in Sources */,
+				27E30FD429814CC100ABB82D /* AsyncTransformer.swift in Sources */,
+				27E30FD629814CC100ABB82D /* MapTrasformer.swift in Sources */,
+				27E30FDF29814CC100ABB82D /* Completion.swift in Sources */,
+				27E30FD829814CC100ABB82D /* AsyncTransformBlock.swift in Sources */,
+				27E30FDA29814CC100ABB82D /* Cancelable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E30FB129814C8000ABB82D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E30FF4298170EF00ABB82D /* AnyCancelableTests.swift in Sources */,
+				27E30FEC29815B8700ABB82D /* MockErrors.swift in Sources */,
+				27E30FEE29815B9000ABB82D /* TransformerState.swift in Sources */,
+				27E30FF029816AE600ABB82D /* AsyncTransformableTests.swift in Sources */,
+				27E30FEB29815B7F00ABB82D /* MapTransformerTests.swift in Sources */,
+				27E30FED29815B8C00ABB82D /* SpyTransformer.swift in Sources */,
+				27E30FF62981720D00ABB82D /* CancelableBagTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27E30FB829814C8000ABB82D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27E30FAC29814C8000ABB82D /* AsyncTransform */;
+			targetProxy = 27E30FB729814C8000ABB82D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		27E30FBD29814C8000ABB82D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		27E30FBE29814C8000ABB82D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		27E30FC029814C8000ABB82D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joachimkret.AsyncTransform;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27E30FC129814C8000ABB82D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joachimkret.AsyncTransform;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		27E30FC329814C8000ABB82D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joachimkret.AsyncTransformTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27E30FC429814C8000ABB82D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joachimkret.AsyncTransformTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27E30FA729814C8000ABB82D /* Build configuration list for PBXProject "AsyncTransform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E30FBD29814C8000ABB82D /* Debug */,
+				27E30FBE29814C8000ABB82D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E30FBF29814C8000ABB82D /* Build configuration list for PBXNativeTarget "AsyncTransform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E30FC029814C8000ABB82D /* Debug */,
+				27E30FC129814C8000ABB82D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E30FC229814C8000ABB82D /* Build configuration list for PBXNativeTarget "AsyncTransformTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E30FC329814C8000ABB82D /* Debug */,
+				27E30FC429814C8000ABB82D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27E30FA429814C8000ABB82D /* Project object */;
+}
